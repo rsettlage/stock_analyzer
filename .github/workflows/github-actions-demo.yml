@@ -19,7 +19,7 @@ jobs:
           pwd
           ls -lah
           Rscript -e "rownames(installed.packages())"
-          Rscript -e '.libPaths("/home/runner/work/stock_analyzer/stock_analyzer");install.packages("tidyquant"); library(timetq); tq_get("SPY",from="2023-10-01")'
+          Rscript -e '.libPaths("/home/runner/work/stock_analyzer/stock_analyzer");install.packages("tidyquant"); library(tidyquant); tq_get("SPY",from="2023-10-01")'
           git add ./*
           git commit -m "adding tidyquant"
           git push
