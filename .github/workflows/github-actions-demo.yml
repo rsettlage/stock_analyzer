@@ -15,4 +15,10 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+          cd ${{ github.workspace }}
+          pwd
+          ls -lah
+          Rscript -e "5+6"
+          date
+          timedatectl
       - run: echo "🍏 This job's status is ${{ job.status }}."
