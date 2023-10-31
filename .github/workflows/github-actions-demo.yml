@@ -18,6 +18,6 @@ jobs:
           pwd
           ls -lah
           Rscript -e "rownames(installed.packages())"
-          Rscript -e 'install.packages("timetq"); library(timetq); tq_get("SPY",from="2023-10-01")'
+          Rscript -e '.libPaths("/home/runner/work/stock_analyzer/stock_analyzer");install.packages("timetq"); library(timetq); tq_get("SPY",from="2023-10-01")'
           timedatectl
       - run: echo "🍏 This job's status is ${{ job.status }}."
