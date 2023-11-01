@@ -18,7 +18,5 @@ jobs:
           timedatectl
           pwd
           ls -lah
-          Rscript -e "rownames(installed.packages())" > test
-          # Rscript -e '.libPaths("/home/runner/work/stock_analyzer/stock_analyzer");install.packages("tidyquant"); library(tidyquant); tq_get("SPY",from="2023-10-01")'
-          lsb_release -a
+          docker --help
       - run: echo "🍏 This job's status is ${{ job.status }}."
