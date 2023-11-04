@@ -10,5 +10,5 @@ RUN installr -d \
     -t "R-dev file linux-headers harfbuzz-dev fribidi-dev freetype-dev libpng-dev tiff-dev jpeg-dev \
                    libxml2-dev gnutls-dev openssl-dev libx11-dev cairo-dev libxt-dev" \
     -a "libxml2 cairo libx11 font-xfree86-type1" \
-    tidyquant
+    stringi tidyquant knitr rmarkdown
 RUN rm -rf /var/cache/apk/*
