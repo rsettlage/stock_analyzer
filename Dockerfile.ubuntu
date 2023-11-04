@@ -1,0 +1,30 @@
+FROM ubuntu:22.04
+
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ="America/New_York"
+#RUN echo "America/New_York" >/etc/timezone
+
+RUN apt update &&\
+    apt -y upgrade &&\
+    apt install -y tzdata wget curl libcurl4-openssl-dev libssl-dev \
+                   libxml2-dev libfontconfig1-dev \
+                   libharfbuzz-dev libfribidi-dev libfreetype6-dev \
+                   libpng-dev libtiff5-dev libjpeg-dev 
+RUN apt autoremove &&\
+    apt clean
+#RUN echo "America/Edmonton" > /etc/timezone
+
+
+# set key for updated R
+#RUN wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | gpg --dearmor -o /usr/share/keyrings/r-project.gpg &&\
+#    echo "deb [signed-by=/usr/share/keyrings/r-project.gpg] https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/" | tee -a /etc/apt/sources.list.d/r-project.list
+#RUN apt update
+
+RUN apt install -y r-base
+
+RUN Rscript -e "install.packages('tidyquant')"
+#RUN Rscript -e "install.packages(c('forcast','plotly')); install.packages('tidyquant')"
+
+RUN rm -rf /var/cache/*
+
+CMD ["R", "-e", "options(tz='America/New_York');"]
