@@ -18,6 +18,6 @@ jobs:
           timedatectl
           pwd
           ls -lah 
-          docker run rsettlag/stock_screener_fun:4.3.2 ls /usr/local/lib/R/library/stringi/libs/
+          docker run rsettlag/stock_screener_fun:R-4.3.2 ls /usr/local/lib/R/library/stringi/libs/
           docker run -v `pwd`:/test rsettlag/stock_screener_fun:R-4.3.2 Rscript -e "library(tidyquant); tq_get("SPY",from="2023-10-01")"
       - run: echo "🍏 This job's status is ${{ job.status }}."
