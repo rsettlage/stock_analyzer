@@ -18,5 +18,5 @@ jobs:
           date "+%Y-%m-%d"
           pwd
           ls -lah
-          docker run -v `pwd`:/test rsettlag/stock_screener_fun:R-4.3.2 /test/CONTROL_run_analysis.sh `date "+%Y-%m-%d"` 
+          docker run -v `pwd`:/root rsettlag/stock_screener_fun:R-4.3.2 /test/CONTROL_run_analysis.sh `date "+%Y-%m-%d"` 
       - run: echo "🍏 This job's status is ${{ job.status }}."
