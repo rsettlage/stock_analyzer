@@ -11,5 +11,5 @@ RUN installr -d \
                    libxml2-dev gnutls-dev openssl-dev libx11-dev cairo-dev libxt-dev" \
     -a "libxml2 cairo libx11 font-xfree86-type1" \
     tidyquant knitr rmarkdown
-# RUN Rscript -e "install.packages('stringi',type='source')"
+RUN Rscript -e "install.packages('stringi',type='source')"
 RUN rm -rf /var/cache/apk/*
