@@ -15,7 +15,7 @@ jobs:
       - name: List files in the repository
         run: |
           cd ${{ github.workspace }}
-          timedatectl
+          date
           pwd
           ls -lah 
           docker run rsettlag/stock_screener_fun:R-4.3.2 ls /usr/local/lib/R/library/stringi/libs/
