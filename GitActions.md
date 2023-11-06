@@ -27,3 +27,17 @@ For more info:
 https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions
 
 In the quick start, we created a directory in our repo (./github/workflows) and put a config file in there (github-actions-demo.yml).  The config file spells out all the steps (Git Actions - run commands) in the workflow.  It also spells out what type of OS (server?) to use, in this case it was ubuntu-latest.
+
+## Git actions CRON
+
+Adding to the coolness of being able to automate some stuff based on a trigger event, we can actually SCHEDULE jobs to run.  Again, free, very high in the coolness factor imo.
+
+The GitHub docs are of course amazing and describe this here:  
+
+<https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule>
+
+Also, very nice post on this here with additional ideas for things you can do:  
+
+<https://jasonet.co/posts/scheduled-actions/>
+
+I agree with Jason, super cool, super useful feature.
