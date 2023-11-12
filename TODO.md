@@ -13,10 +13,11 @@
 # Data
 
 1.  Get data. -- FIX issue with getting data. -- DONE
-2.  Munge data.
-3.  Save data in repo. -- FIX object 'init_stock_data' not found.
-4.  Schedule data retrieval via GitHub CRON.
-5.  Create script to launch and control data operations.
+2.  Munge data. -- DONE
+3.  Save data. -- FIX object 'init_stock_data' not found. -- DONE
+4.  Save data in repo.
+5.  Schedule data retrieval via GitHub CRON. -- DONE
+6.  Create script to launch and control data operations.
 
 # Analysis.
 
