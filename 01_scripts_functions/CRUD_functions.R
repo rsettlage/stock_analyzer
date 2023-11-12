@@ -26,8 +26,8 @@ save_data <-
       function(data, file_name, file_dir){
         # function to save stock data
         # returns tibble of historical stock prices
-        saveRDS(init_stock_data, file=str_glue({file_dir},{file_name},".RDS"))
-        write_csv(init_stock_data, file=str_glue({file_dir},{file_name},".cvs"))
+        saveRDS(data, file=str_glue({file_dir},{file_name},".RDS"))
+        write_csv(data, file=str_glue({file_dir},{file_name},".cvs"))
       }
 
 load_data <-
