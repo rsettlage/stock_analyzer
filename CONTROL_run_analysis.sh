@@ -23,7 +23,7 @@ Rscript CONTROL_get_munge_data.R $wdate
 
 # 3.0 add/commit data and report
 
-git add 00_working_data/*
-git commit -m "updating data"
-git push
+#git add 00_working_data/*
+#git commit -m "updating data"
+#git push
 
