@@ -28,5 +28,9 @@ jobs:
           git remote set-url origin ${{ secrets.ssh }}
           git add 00_working_data/*
           git commit -m "updating data to repo"
-          git push origin HEAD:main
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
