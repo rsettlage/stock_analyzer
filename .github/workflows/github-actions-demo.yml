@@ -23,8 +23,8 @@ jobs:
           docker run -v `pwd`:/test rsettlag/stock_screener_fun:R-4.3.2 /test/CONTROL_run_analysis.sh `date "+%Y-%m-%d"`
       - name: Commit files  # transfer the new html files back into the repository
         run: |
-          git config --local user.name  ${{ github.actor }}        
-          git config --local user.email "${{ github.actor }}@users.noreply.github.com"
+          git config --local user.name  "Bob Settlage"       
+          git config --local user.email "bob.settlage@gmail.com"
           git add 00_working_data/*
           git commit -m "updating data to repo"
       - name: Push changes  # push the output folder to your repo
