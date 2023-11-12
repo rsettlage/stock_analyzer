@@ -21,15 +21,15 @@ jobs:
       - name: Do analysis
         run: |
           docker run -v `pwd`:/test rsettlag/stock_screener_fun:R-4.3.2 /test/CONTROL_run_analysis.sh `date "+%Y-%m-%d"`
-      - name: Update repo
+      - name: Commit files  # transfer the new html files back into the repository
         run: |
-          git config --global user.email "bobsettlage@gmail.com"
-          git config --global user.name "Bob Settlage (git)"
+          git config --local user.name  ${{ github.actor }}        
+          git config --local user.email "${{ github.actor }}@users.noreply.github.com"
           git add 00_working_data/*
           git commit -m "updating data to repo"
-      - name: Push changes
+      - name: Push changes  # push the output folder to your repo
         uses: ad-m/github-push-action@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+          force: true
       - run: echo "🍏 This job's status is ${{ job.status }}."
