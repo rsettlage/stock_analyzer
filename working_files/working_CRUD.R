@@ -40,14 +40,17 @@ get_daily_update <- function(tickers = "SPY", update_day = "2023-10-02"){
   stock_metrics <- tq_get("T",from="2023-10-03",to="2023-10-04")
   stock_metrics[1,1] <- "-"
   
+  # getting a week to make sure the function doesnt fail, filter after
+  # evidently to is non-inclusive, so adding a day
   stock_metrics <- bind_rows(stock_metrics,
                              tq_get(x    = tickers,
-                                    from = update_day,
+                                    from = ymd(update_day)-5,
                                     to   = ymd(update_day)+1))
   stock_metrics <- stock_metrics %>%
     select(-volume) %>%
     filter(symbol != "-") %>%
-    filter(complete.cases(.)) 
+    filter(complete.cases(.)) %>%
+    filter(date == update_day)
   return(stock_metrics)
 }
 
