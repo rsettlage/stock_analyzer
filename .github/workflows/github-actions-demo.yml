@@ -23,7 +23,7 @@ jobs:
           docker run -v `pwd`:/test rsettlag/stock_screener_fun:R-4.3.2 /test/CONTROL_run_analysis.sh `date "+%Y-%m-%d"`
       - name: Update repo
         run: |
-          git add 01_working_data/*
+          git add 00_working_data/*
           git commit -m "updating data to repo"
           git push
       - run: echo "🍏 This job's status is ${{ job.status }}."
