@@ -7,6 +7,7 @@ wdate=$1
 echo working on $wdate
 
 ## assuming we are mounting in at /test
+pwd
 cd /test
 
 # 1.0 get data

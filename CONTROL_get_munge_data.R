@@ -37,16 +37,29 @@ previous_data <- load_data(file_name="workingData",file_dir="00_working_data/",e
 # day of week, month, quarter, day of year, year
 # and of course, there is a function for that
 
-working_data <- new_data %>% 
-  tk_augment_timeseries_signature(.date_var = date) %>%
-  bind_rows(previous_data) 
+# need to make sure new data isn't empty
+if(nrow(new_data)>0){
+  
+  # handle init of previous data, ie make sure it has all the tk stuff
+  if(ncol(previous_data)==8){
+    previous_data <- previous_data %>%
+      tk_augment_timeseries_signature(.date_var = date)
+  }
+  
+  working_data <- new_data %>% 
+    tk_augment_timeseries_signature(.date_var = date) %>%
+    bind_rows(previous_data) 
+  
+  working_data <- working_data %>%
+    mutate(symbol_date = paste({symbol},{date},sep=".")) %>%
+    filter(!duplicated(symbol_date)) %>% 
+    filter(symbol != "-") %>%
+    select(-symbol_date) %>%
+    arrange(symbol, date)
+}else{
+  working_data <- previous_data # could have just changed the save, but this works too
+}
 
-working_data <- working_data %>%
-  mutate(symbol_date = paste({symbol},{date},sep=".")) %>%
-  filter(!duplicated(symbol_date)) %>% 
-  filter(symbol != "-") %>%
-  select(-symbol_date) %>%
-  arrange(symbol, date)
 
 
 # 4.0 save data ----
