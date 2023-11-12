@@ -25,7 +25,6 @@ jobs:
         run: |
           git config --global user.email "bobsettlage@gmail.com"
           git config --global user.name "Bob Settlage (git)"
-          git remote set-url origin ${{ secrets.ssh }}
           git add 00_working_data/*
           git commit -m "updating data to repo"
       - name: Push changes
