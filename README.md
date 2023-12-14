@@ -8,12 +8,12 @@ This is meant for me to test out automation and create some visuals for use in i
 
 1. Github actions:
    + sets up a Ubuntu runner :heavy_check_mark:
-   + clones this repo to the runner
-   + pulls a Alpine Linux container (See Dockerfile) to the runner
-   + starts CONTROL_run_analysis.sh within the container
+   + clones this repo to the runner :heavy_check_mark:
+   + pulls a Alpine Linux container (See Dockerfile) to the runner :heavy_check_mark:
+   + starts CONTROL_run_analysis.sh within the container :heavy_check_mark:
 2. CONTROL_run_analysis.sh controls:
-   + An Rscript to get and munge data
-   + Write data
-   + Rmarkdown script to create some reports
-3. Github actions then add/commits/pushes updated data and reports
+   + An Rscript to get and munge data :heavy_check_mark:
+   + Write data :heavy_check_mark:
+   + Rmarkdown script to create some reports *TODO*
+3. Github actions then add/commits/pushes updated data and reports :heavy_check_mark:
 
