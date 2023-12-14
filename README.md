@@ -14,6 +14,6 @@ This is meant for me to test out automation and create some visuals for use in i
 2. CONTROL_run_analysis.sh controls:
    + An Rscript to get and munge data :heavy_check_mark:
    + Write data :heavy_check_mark:
-   + Rmarkdown script to create some reports *TODO*
+   + Rmarkdown script to create some reports **TODO**
 3. Github actions then add/commits/pushes updated data and reports :heavy_check_mark:
 
