@@ -2,7 +2,7 @@
 
 This app will eventually pull data of interest from Yahoo Finance, analyze the tickers and assist in prediction of movement.
 
-This is meant for me to test out automation and create some visuals for use in informing my trading.  The current plan is to run this every day after market close.  Through git actions cron (see .github/workflows/daily_actions.yml), it is set to run daily at 4:40 EST.
+This is meant for me to test out automation and create some visuals for use in informing my trading.  The current plan is to run this every day after market close.  Through git actions cron (see .github/workflows/daily_actions.yml), it is set to run daily at 4:30 pm EST (21:30 GMT) but consistently runs at 4:41 pm EST.  Eh, after close, so good enough for me.
 
 ## Order of operations:
 
