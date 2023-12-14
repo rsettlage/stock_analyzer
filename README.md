@@ -15,7 +15,7 @@ This is meant for me to test out automation and create some visuals for use in i
    + An Rscript to get and munge data :heavy_check_mark:
    + Write data :heavy_check_mark:
    + Rmarkdown script to create some reports **TODO**
-   + + Looking to start with a seasonality chart as on Bloomberg TV.  I would like to do this at the week/day level rather than month.
+     + Looking to start with a seasonality chart as on Bloomberg TV.  I would like to do this at the week/day level rather than month.
      + Wanting to add some lag charts using the various tickers to see if there are some patterns we can tease out
 3. Github actions then add/commits/pushes updated data and reports :heavy_check_mark:
 
