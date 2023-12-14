@@ -19,3 +19,5 @@ This is meant for me to test out automation and create some visuals for use in i
      + Wanting to add some lag charts using the various tickers to see if there are some patterns we can tease out
 3. Github actions then add/commits/pushes updated data and reports :heavy_check_mark:
 
+Like what you see or want to contribute?  Leave a comment in the issues, do a pull request, or send me a note!
+
