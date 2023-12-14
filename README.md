@@ -7,7 +7,7 @@ This is meant for me to test out automation and create some visuals for use in i
 ## Order of operations:
 
 1. Github actions:
-   + sets up a Ubuntu runner
+   + sets up a Ubuntu runner :heavy_check_mark:
    + clones this repo to the runner
    + pulls a Alpine Linux container (See Dockerfile) to the runner
    + starts CONTROL_run_analysis.sh within the container
